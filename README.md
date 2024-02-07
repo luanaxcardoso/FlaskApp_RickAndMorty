@@ -14,3 +14,5 @@ Obtenção da Lista de Personagens em JSON:
 
 Rota: /lista
 Descrição: Retorna uma lista de personagens em formato JSON, incluindo seus nomes, status e espécie.
+
+![giphy](https://github.com/luanaxcardoso/FlaskApp_RickAndMorty/assets/112970416/83e4a128-2ae7-4296-9620-ec90a2c2dc09)

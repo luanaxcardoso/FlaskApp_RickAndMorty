@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1>Episódio</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Data de Lançamento</th>
+                <th scope="col">Episódio</th>
+                <th scope="col">Personagens</th> <!-- Adicionei uma coluna para personagens -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ episode.name }}</td>
+                <td>{{ episode.air_date }}</td>
+                <td>{{ episode.episode }}</td>
+                <td>
+                    <div class="row">
+                        {% for character in characters %}
+                        <div class="col-md-4 mb-4"> 
+                            <div class="card">
+                                <img src="{{ character.image }}" class="card-img-top" alt="{{ character.name }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ character.name }}</h5>
+                                    <a href="/profile/{{ character.id }}" class="btn btn-success btn-sm">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
